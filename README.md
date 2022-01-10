@@ -1,10 +1,30 @@
-- 👋 Hi, I’m Hemant
-- 👀 I’m interested in Coding
-- 🌱 I’m currently learning Python
-- 💞️ I’m looking to collaborate on ...
-- 📫 reach me babu.hemant322@gmail.com
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
 
-<!---
-ErHemant1/ErHemant1 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+int main () {
+  // Create a text file
+  ofstream MyWriteFile("filename.txt");
+
+  // Write to the file
+  MyWriteFile << "Hemants Github File (babu.hemant322@gmail.com)!";
+ 
+  // Close the file
+  MyWriteFile.close();
+
+  // Create a text string, which is used to output the text file
+  string myText;
+
+  // Read from the text file
+  ifstream MyReadFile("filename.txt");
+
+  // Use a while loop together with the getline() function to read the file line by line
+  while (getline (MyReadFile, myText)) {
+    // Output the text from the file
+    cout << myText;
+  }
+
+  // Close the file
+  MyReadFile.close();
+}
